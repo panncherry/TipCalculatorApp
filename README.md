@@ -10,16 +10,16 @@ Time spent: 3.5 hours spent in total
 
 The following **required** functionality is complete:
 
-* [ ] User can enter a bill amount, choose a tip percentage, and see the tip and total values.
+* [X] User can enter a bill amount, choose a tip percentage, and see the tip and total values.
 
 The following **optional** features are implemented:
-* [ ] Remembering the bill amount across app restarts (if <10mins)
-* [ ] Using locale-specific currency and currency thousands separators.
+* [X] Remembering the bill amount across app restarts (if <10mins)
+* [X] Using locale-specific currency and currency thousands separators.
 
 
 The following **additional** features are implemented:
 
-- [ ] Use UISlider to calculate tip amount and total amount per person for sharing the bill.
+- [X] Use UISlider to calculate tip amount and total amount per person for sharing the bill.
 
 ## Video Walkthrough 
 
