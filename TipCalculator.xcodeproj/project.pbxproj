@@ -11,9 +11,9 @@
 		087619FA2132493E00D47836 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087619F92132493E00D47836 /* ViewController.swift */; };
 		087619FD2132493E00D47836 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 087619FB2132493E00D47836 /* Main.storyboard */; };
 		087619FF2132494000D47836 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 087619FE2132494000D47836 /* Assets.xcassets */; };
-		08761A022132494000D47836 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08761A002132494000D47836 /* LaunchScreen.storyboard */; };
 		08761A0D2132494000D47836 /* TipCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08761A0C2132494000D47836 /* TipCalculatorTests.swift */; };
 		08761A182132494000D47836 /* TipCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08761A172132494000D47836 /* TipCalculatorUITests.swift */; };
+		089DEE562270B95E00F9160B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 089DEE552270B95E00F9160B /* LaunchScreen.storyboard */; };
 		18FC6FFE12CD6847E9938FE6 /* Pods_TipCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15028338D984AA954B4EF264 /* Pods_TipCalculator.framework */; };
 		8F291B42A51444D890FFB549 /* Pods_TipCalculatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD69FA724D26ED1A1628A89 /* Pods_TipCalculatorTests.framework */; };
 		B606C44F4AAB0D64AEA98D59 /* Pods_TipCalculatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C61000BF3C9AF68E576BE4 /* Pods_TipCalculatorUITests.framework */; };
@@ -42,7 +42,6 @@
 		087619F92132493E00D47836 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		087619FC2132493E00D47836 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		087619FE2132494000D47836 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		08761A012132494000D47836 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08761A032132494000D47836 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08761A082132494000D47836 /* TipCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08761A0C2132494000D47836 /* TipCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalculatorTests.swift; sourceTree = "<group>"; };
@@ -50,6 +49,7 @@
 		08761A132132494000D47836 /* TipCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08761A172132494000D47836 /* TipCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalculatorUITests.swift; sourceTree = "<group>"; };
 		08761A192132494000D47836 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		089DEE552270B95E00F9160B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15028338D984AA954B4EF264 /* Pods_TipCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TipCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E6BD53FDD79E445061600D /* Pods-TipCalculatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TipCalculatorUITests.debug.xcconfig"; path = "Target Support Files/Pods-TipCalculatorUITests/Pods-TipCalculatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		27100CF1B51DF471A3661D24 /* Pods-TipCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TipCalculator.release.xcconfig"; path = "Target Support Files/Pods-TipCalculator/Pods-TipCalculator.release.xcconfig"; sourceTree = "<group>"; };
@@ -117,8 +117,8 @@
 				087619F72132493E00D47836 /* AppDelegate.swift */,
 				087619F92132493E00D47836 /* ViewController.swift */,
 				087619FB2132493E00D47836 /* Main.storyboard */,
+				089DEE552270B95E00F9160B /* LaunchScreen.storyboard */,
 				087619FE2132494000D47836 /* Assets.xcassets */,
-				08761A002132494000D47836 /* LaunchScreen.storyboard */,
 				08761A032132494000D47836 /* Info.plist */,
 			);
 			path = TipCalculator;
@@ -276,7 +276,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08761A022132494000D47836 /* LaunchScreen.storyboard in Resources */,
+				089DEE562270B95E00F9160B /* LaunchScreen.storyboard in Resources */,
 				087619FF2132494000D47836 /* Assets.xcassets in Resources */,
 				087619FD2132493E00D47836 /* Main.storyboard in Resources */,
 			);
@@ -439,14 +439,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		08761A002132494000D47836 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				08761A012132494000D47836 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -576,7 +568,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = RnR.CherryPann.TipCalculator;
+				PRODUCT_BUNDLE_IDENTIFIER = RnR.TipCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -595,7 +587,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = RnR.CherryPann.TipCalculator;
+				PRODUCT_BUNDLE_IDENTIFIER = RnR.TipCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

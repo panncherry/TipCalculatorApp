@@ -71,8 +71,8 @@
                                     <action selector="personSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="cY4-HH-2rB"/>
                                 </connections>
                             </slider>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BottomEdge" translatesAutoresizingMaskIntoConstraints="NO" id="HyL-WL-COO">
-                                <rect key="frame" x="0.0" y="599" width="375" height="68"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="BottomEdge" translatesAutoresizingMaskIntoConstraints="NO" id="HyL-WL-COO">
+                                <rect key="frame" x="0.0" y="626" width="375" height="41"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAX-cn-4zR">
                                 <rect key="frame" x="30" y="422" width="26" height="22"/>
@@ -133,6 +133,7 @@
                             <constraint firstItem="pAM-B4-z62" firstAttribute="centerY" secondItem="iAX-cn-4zR" secondAttribute="centerY" id="3aF-p2-Sic"/>
                             <constraint firstItem="AtZ-3d-Vk3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="4Cn-6z-ase"/>
                             <constraint firstItem="GXy-9c-1aE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5B9-mX-kUV"/>
+                            <constraint firstItem="HyL-WL-COO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6dQ-c3-rLA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HyL-WL-COO" secondAttribute="bottom" id="6ut-S8-TrW"/>
                             <constraint firstItem="aJG-p0-bhR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="6wF-CA-40L"/>
                             <constraint firstItem="ayx-yo-qlk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="UyN-R7-ndX" secondAttribute="trailing" constant="23" id="7FD-ue-gfO"/>
@@ -151,7 +152,6 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M6D-My-Img" secondAttribute="trailing" constant="30" id="REH-XG-fPU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rtn-eF-a1d" secondAttribute="trailing" constant="30" id="SD1-ca-ph1"/>
                             <constraint firstItem="UyN-R7-ndX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Tiw-p8-cCG"/>
-                            <constraint firstItem="HyL-WL-COO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ufg-0r-hOQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GXy-9c-1aE" secondAttribute="trailing" id="VTx-fw-BAw"/>
                             <constraint firstItem="Bp3-6M-2By" firstAttribute="centerY" secondItem="AtZ-3d-Vk3" secondAttribute="centerY" constant="-4.5" id="WVK-qX-fOL"/>
                             <constraint firstItem="pAM-B4-z62" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iAX-cn-4zR" secondAttribute="trailing" constant="155" id="Yus-or-f8o"/>
