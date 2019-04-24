@@ -3,6 +3,10 @@
 TipCalculator is a tip calculator application for iOS platforms.
 
 
+## Download on Apple Store
+https://itunes.apple.com/us/app/easytiip/id1460096831?mt=8
+
+
 ## Language, Pods and Frameworks
 - [x] Swift
 
