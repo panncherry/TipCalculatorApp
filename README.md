@@ -7,19 +7,6 @@ TipCalculator is a tip calculator application for iOS platforms.
 https://itunes.apple.com/us/app/easytiip/id1460096831?mt=8
 
 
-## Language, Pods and Frameworks
-- [x] Swift
-
-
-## User stories
-
-- [x] User can enter a bill amount, choose a tip percentage, and see the tip and total values.
-- [x] Remembering the bill amount across app restarts (if <10mins)
-- [x] Using locale-specific currency and currency thousands separators.
-- [x] Use UISlider to calculate tip amount and total amount per person for sharing the bill.
-
-
-
 ## Screenshots 
 
 Here's the screenshots of implemented user stories: 
@@ -37,6 +24,20 @@ Here's a walkthrough of implemented user stories:
 <img src='https://i.imgur.com/did6xqN.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
+
+
+
+## Language, Pods and Frameworks
+- [x] Swift
+
+
+## User stories
+
+- [x] User can enter a bill amount, choose a tip percentage, and see the tip and total values.
+- [x] Remembering the bill amount across app restarts (if <10mins)
+- [x] Using locale-specific currency and currency thousands separators.
+- [x] Use UISlider to calculate tip amount and total amount per person for sharing the bill.
+
 
 
 ## License
