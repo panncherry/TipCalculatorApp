@@ -16,20 +16,21 @@ TipCalculator is a tip calculator application for iOS platforms.
 
 
 
+## Screenshots 
+
+Here's the screenshots of implemented user stories: 
+
+<img src='https://i.imgur.com/KNi2ivu.png' title='Screenshot1' width='150' alt='' /><img src='https://i.imgur.com/OhDEkVx.png' title='Screenshot2' width='150' alt='' /><img src='https://i.imgur.com/XMnW1Iz.png' title='Screenshot3' width='150' alt='' /><img src='https://i.imgur.com/c7j0UQA.png' title='Screenshot4' width='150' alt='' /><img src='https://i.imgur.com/50JSKQP.png' title='Screenshot5' width='150' alt='' />
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
+
+
+
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories: 
 
 <img src='https://i.imgur.com/did6xqN.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
-
-
-## Screenshots 
-
-Here's the screenshots of implemented user stories: 
-
-<img src='https://i.imgur.com/KNi2ivu.png' title='Screenshot1' width='120' alt='' /><img src='https://i.imgur.com/OhDEkVx.png' title='Screenshot2' width='120' alt='' /><img src='https://i.imgur.com/XMnW1Iz.png' title='Screenshot3' width='120' alt='' /><img src='https://i.imgur.com/c7j0UQA.png' title='Screenshot4' width='120' alt='' /><img src='https://i.imgur.com/50JSKQP.png' title='Screenshot5' width='120' alt='' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
