@@ -20,7 +20,7 @@ TipCalculator is a tip calculator application for iOS platforms.
 
 Here's the screenshots of implemented user stories: 
 
-<img src='https://i.imgur.com/KNi2ivu.png' title='Screenshot1' width='180' alt='' /><img src='https://i.imgur.com/OhDEkVx.png' title='Screenshot2' width='180' alt='' /><img src='https://i.imgur.com/XMnW1Iz.png' title='Screenshot3' width='180' alt='' /><img src='https://i.imgur.com/c7j0UQA.png' title='Screenshot4' width='180' alt='' /><img src='https://i.imgur.com/50JSKQP.png' title='Screenshot5' width='180' alt='' />
+<img src='https://i.imgur.com/KNi2ivu.png' title='Screenshot1' width='180' alt='' /><img src='https://i.imgur.com/OhDEkVx.png' title='Screenshot2' width='180' alt='' /><img src='https://i.imgur.com/XMnW1Iz.png' title='Screenshot3' width='180' alt='' /><img src='https://i.imgur.com/c7j0UQA.png' title='Screenshot4' width='180' alt='' /><img src='https://i.imgur.com/50JSKQP.png' title='Screenshot5' width='175' alt='' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
