@@ -16,6 +16,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let rootVC = UINavigationController(rootViewController: TipCalculatorViewController())
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.backgroundColor = .white
+        self.window?.rootViewController = rootVC
+        self.window?.makeKeyAndVisible()
+
+        let navigationTitleColor = #colorLiteral(red: 0.3529411765, green: 0.6431372549, blue: 0.4980392157, alpha: 1)
+
+        if #available(iOS 15, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.shadowImage = nil
+            appearance.shadowColor = nil
+            appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: navigationTitleColor, NSAttributedString.Key.font: UIFont(name: "Playball", size: 30) ?? UIFont.systemFont(ofSize: 30)]
+            UINavigationBar.appearance().standardAppearance = appearance
+        } else {
+            UINavigationBar.appearance().tintColor = navigationTitleColor
+            UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: navigationTitleColor]
+
+            UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
+            UINavigationBar.appearance().shadowImage = UIImage()
+            UINavigationBar.appearance().isTranslucent = false
+            UINavigationBar.appearance().backgroundColor = .white
+        }
+        
         return true
     }
 

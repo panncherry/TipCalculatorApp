@@ -3,10 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		085DB5622810AF7800345F9F /* TipCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085DB5602810AF7800345F9F /* TipCalculatorViewController.swift */; };
+		085DB5632810AF7800345F9F /* TipCalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 085DB5612810AF7800345F9F /* TipCalculatorViewController.xib */; };
+		085DB56B2811FFC700345F9F /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085DB56A2811FFC600345F9F /* UIViewController+Extension.swift */; };
+		085DB570281209EE00345F9F /* Playball.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 085DB56F281209EE00345F9F /* Playball.ttf */; };
+		085DB57228120A1600345F9F /* NunitoSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 085DB57128120A1600345F9F /* NunitoSans-SemiBoldItalic.ttf */; };
+		085DB5742812448200345F9F /* UITextFields+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085DB5732812448200345F9F /* UITextFields+Extension.swift */; };
+		085DB5762812462300345F9F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085DB5752812462300345F9F /* CustomTextField.swift */; };
+		085DB5782812519600345F9F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085DB5772812519600345F9F /* CustomButton.swift */; };
+		085DB57A2812558800345F9F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 085DB5792812558800345F9F /* Colors.xcassets */; };
+		085DB57C28128BC100345F9F /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085DB57B28128BC100345F9F /* CustomSlider.swift */; };
+		085DB57E28129F5800345F9F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085DB57D28129F5700345F9F /* UIView+Extension.swift */; };
 		087619F82132493E00D47836 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087619F72132493E00D47836 /* AppDelegate.swift */; };
 		087619FA2132493E00D47836 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087619F92132493E00D47836 /* ViewController.swift */; };
 		087619FD2132493E00D47836 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 087619FB2132493E00D47836 /* Main.storyboard */; };
@@ -37,6 +48,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		085DB5602810AF7800345F9F /* TipCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalculatorViewController.swift; sourceTree = "<group>"; };
+		085DB5612810AF7800345F9F /* TipCalculatorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipCalculatorViewController.xib; sourceTree = "<group>"; };
+		085DB56A2811FFC600345F9F /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		085DB56F281209EE00345F9F /* Playball.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Playball.ttf; sourceTree = "<group>"; };
+		085DB57128120A1600345F9F /* NunitoSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		085DB5732812448200345F9F /* UITextFields+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextFields+Extension.swift"; sourceTree = "<group>"; };
+		085DB5752812462300345F9F /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		085DB5772812519600345F9F /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		085DB5792812558800345F9F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		085DB57B28128BC100345F9F /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
+		085DB57D28129F5700345F9F /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		087619F42132493E00D47836 /* TipCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		087619F72132493E00D47836 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		087619F92132493E00D47836 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +111,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		085DB5692811FFA700345F9F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				085DB56A2811FFC600345F9F /* UIViewController+Extension.swift */,
+				085DB5732812448200345F9F /* UITextFields+Extension.swift */,
+				085DB57D28129F5700345F9F /* UIView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		085DB56C2812003300345F9F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				085DB57128120A1600345F9F /* NunitoSans-SemiBoldItalic.ttf */,
+				085DB56F281209EE00345F9F /* Playball.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		087619EB2132493E00D47836 = {
 			isa = PBXGroup;
 			children = (
@@ -114,12 +155,20 @@
 		087619F62132493E00D47836 /* TipCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				085DB56C2812003300345F9F /* Fonts */,
 				087619F72132493E00D47836 /* AppDelegate.swift */,
+				085DB5602810AF7800345F9F /* TipCalculatorViewController.swift */,
+				085DB5612810AF7800345F9F /* TipCalculatorViewController.xib */,
+				085DB5692811FFA700345F9F /* Extensions */,
 				087619F92132493E00D47836 /* ViewController.swift */,
 				087619FB2132493E00D47836 /* Main.storyboard */,
 				089DEE552270B95E00F9160B /* LaunchScreen.storyboard */,
 				087619FE2132494000D47836 /* Assets.xcassets */,
+				085DB5792812558800345F9F /* Colors.xcassets */,
 				08761A032132494000D47836 /* Info.plist */,
+				085DB5752812462300345F9F /* CustomTextField.swift */,
+				085DB5772812519600345F9F /* CustomButton.swift */,
+				085DB57B28128BC100345F9F /* CustomSlider.swift */,
 			);
 			path = TipCalculator;
 			sourceTree = "<group>";
@@ -232,7 +281,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1330;
 				ORGANIZATIONNAME = "Pann Cherry";
 				TargetAttributes = {
 					087619F32132493E00D47836 = {
@@ -277,8 +326,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				089DEE562270B95E00F9160B /* LaunchScreen.storyboard in Resources */,
+				085DB570281209EE00345F9F /* Playball.ttf in Resources */,
 				087619FF2132494000D47836 /* Assets.xcassets in Resources */,
+				085DB5632810AF7800345F9F /* TipCalculatorViewController.xib in Resources */,
 				087619FD2132493E00D47836 /* Main.storyboard in Resources */,
+				085DB57228120A1600345F9F /* NunitoSans-SemiBoldItalic.ttf in Resources */,
+				085DB57A2812558800345F9F /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,16 +358,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TipCalculator/Pods-TipCalculator-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-TipCalculator/Pods-TipCalculator-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-TipCalculator/Pods-TipCalculator-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -394,7 +442,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				085DB56B2811FFC700345F9F /* UIViewController+Extension.swift in Sources */,
 				087619FA2132493E00D47836 /* ViewController.swift in Sources */,
+				085DB5762812462300345F9F /* CustomTextField.swift in Sources */,
+				085DB57E28129F5800345F9F /* UIView+Extension.swift in Sources */,
+				085DB5622810AF7800345F9F /* TipCalculatorViewController.swift in Sources */,
+				085DB57C28128BC100345F9F /* CustomSlider.swift in Sources */,
+				085DB5782812519600345F9F /* CustomButton.swift in Sources */,
+				085DB5742812448200345F9F /* UITextFields+Extension.swift in Sources */,
 				087619F82132493E00D47836 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,6 +523,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -493,7 +549,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -528,6 +584,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -547,7 +604,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -571,7 +628,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = RnR.TipCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -590,7 +647,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = RnR.TipCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

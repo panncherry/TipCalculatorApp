@@ -1,16 +1,16 @@
 PODS:
-  - FLAnimatedImage (1.0.12)
+  - FLAnimatedImage (1.0.16)
 
 DEPENDENCIES:
   - FLAnimatedImage
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - FLAnimatedImage
 
 SPEC CHECKSUMS:
-  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  FLAnimatedImage: 8f3e854ebf9680b71f0b6e700939687fc4d82b4b
 
 PODFILE CHECKSUM: f9e612a72f3f83938a9760b66f317ff081630b82
 
-COCOAPODS: 1.6.0.beta.1
+COCOAPODS: 1.11.2
