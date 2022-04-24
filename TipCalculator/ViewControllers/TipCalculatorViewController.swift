@@ -14,38 +14,26 @@ class TipCalculatorViewController: UIViewController {
 
     /// IBOutlets
     @IBOutlet weak var bottomView: UIView!
-
     @IBOutlet weak var textField: CustomTextField!
-
     @IBOutlet weak var tenPercentButton: CustomButton!
-
     @IBOutlet weak var fifteenPercentButton: CustomButton!
-
     @IBOutlet weak var twentyPercentButton: CustomButton!
-
     @IBOutlet weak var twentyFivePercentButton: CustomButton!
-
     @IBOutlet weak var customTipButton: CustomButton!
-
     @IBOutlet weak var slider: CustomSlider!
-
     @IBOutlet weak var numberOfPersonLabel: UILabel!
-
+    @IBOutlet weak var totalTipLabel: UILabel!
+    @IBOutlet weak var totalBillLabel: UILabel!
+    @IBOutlet weak var totalPerPersonLabel: UILabel!
+    @IBOutlet weak var tipPerPersonLabel: UILabel!
+    @IBOutlet weak var billPerPersonLabel: UILabel!
     @IBOutlet weak var topViewHeightConstraint: NSLayoutConstraint!
 
-    @IBOutlet weak var tipPerPersonLabel: UILabel!
-
-    @IBOutlet weak var billPerPersonLabel: UILabel!
-
-    @IBOutlet weak var totalPerPersonLabel: UILabel!
-
-    @IBOutlet weak var totalBillLabel: UILabel!
-
-    @IBOutlet weak var totalTipLabel: UILabel!
 
     /// Properties
     var currentSliderValue: Double = 2.0
     var selectedTipPercent: Double = 0.20
+
 
     // MARK: - Life cycles
     override func viewDidLoad() {
@@ -128,15 +116,11 @@ class TipCalculatorViewController: UIViewController {
         let totalPerPerson = billPerPerson + tipPerPerson
 
         /// Updates labels text
-        tipPerPersonLabel.text = tipPerPerson.convertDoubleToCurrency() ?? "$0.00"
-
-        totalPerPersonLabel.text = totalPerPerson.convertDoubleToCurrency() ?? "$0.00"
-
-        billPerPersonLabel.text = billPerPerson.convertDoubleToCurrency() ?? "$0.00"
-
-        totalBillLabel.text = billTotal.convertDoubleToCurrency() ?? "$0.00"
-
         totalTipLabel.text = tipTotal.convertDoubleToCurrency() ?? "$0.00"
+        totalBillLabel.text = billTotal.convertDoubleToCurrency() ?? "$0.00"
+        tipPerPersonLabel.text = tipPerPerson.convertDoubleToCurrency() ?? "$0.00"
+        billPerPersonLabel.text = billPerPerson.convertDoubleToCurrency() ?? "$0.00"
+        totalPerPersonLabel.text = totalPerPerson.convertDoubleToCurrency() ?? "$0.00"
     }
 
     func getInputAmount() -> Double {
@@ -194,16 +178,7 @@ extension TipCalculatorViewController: UITextFieldDelegate {
 
 extension UITextField {
 
-    /// Check max length
-    func checkMaxLength(_ maxLength: Int) {
-        guard let text = self.text, !text.isEmpty else {
-            return
-        }
 
-        if (text.count > maxLength) {
-            self.deleteBackward()
-        }
-    }
     
 }
 

@@ -10,7 +10,8 @@ import UIKit
 
 extension Double {
 
-    //convert double to currency
+    /// Converts double to currency
+    /// Returns an optional string with currency symbol
     func convertDoubleToCurrency() -> String? {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .currency
@@ -23,6 +24,8 @@ extension Double {
         return currenyString
     }
 
+    /// Converts double to currency or decimal
+    /// Returns an optional string with currency symbol or number
     func commasNoDecimals(isCurrency: Bool) -> String {
         let numberFormatter = NumberFormatter()
         numberFormatter.locale = Locale(identifier: "en_US")

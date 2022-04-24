@@ -12,6 +12,8 @@
 		08037C322814F43F008E9C97 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08037C312814F43F008E9C97 /* Double+Extension.swift */; };
 		08037C352814F592008E9C97 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08037C342814F592008E9C97 /* Colors.swift */; };
 		08037C372815010B008E9C97 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08037C362815010B008E9C97 /* String+Extension.swift */; };
+		08037C3A281614EA008E9C97 /* CustomTipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08037C38281614E9008E9C97 /* CustomTipViewController.swift */; };
+		08037C3B281614EA008E9C97 /* CustomTipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08037C39281614E9008E9C97 /* CustomTipViewController.xib */; };
 		085DB5622810AF7800345F9F /* TipCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085DB5602810AF7800345F9F /* TipCalculatorViewController.swift */; };
 		085DB5632810AF7800345F9F /* TipCalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 085DB5612810AF7800345F9F /* TipCalculatorViewController.xib */; };
 		085DB56B2811FFC700345F9F /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085DB56A2811FFC600345F9F /* UIViewController+Extension.swift */; };
@@ -58,6 +60,8 @@
 		08037C312814F43F008E9C97 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		08037C342814F592008E9C97 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		08037C362815010B008E9C97 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		08037C38281614E9008E9C97 /* CustomTipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTipViewController.swift; sourceTree = "<group>"; };
+		08037C39281614E9008E9C97 /* CustomTipViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTipViewController.xib; sourceTree = "<group>"; };
 		085DB5602810AF7800345F9F /* TipCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalculatorViewController.swift; sourceTree = "<group>"; };
 		085DB5612810AF7800345F9F /* TipCalculatorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipCalculatorViewController.xib; sourceTree = "<group>"; };
 		085DB56A2811FFC600345F9F /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
@@ -129,16 +133,48 @@
 			path = Colors;
 			sourceTree = "<group>";
 		};
+		08037C3C281614F3008E9C97 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				085DB5602810AF7800345F9F /* TipCalculatorViewController.swift */,
+				085DB5612810AF7800345F9F /* TipCalculatorViewController.xib */,
+				08037C38281614E9008E9C97 /* CustomTipViewController.swift */,
+				08037C39281614E9008E9C97 /* CustomTipViewController.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		08037C3D28161514008E9C97 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				08761A032132494000D47836 /* Info.plist */,
+				087619FE2132494000D47836 /* Assets.xcassets */,
+				085DB5792812558800345F9F /* Colors.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		08037C3E28161550008E9C97 /* CustomItems */ = {
+			isa = PBXGroup;
+			children = (
+				085DB5772812519600345F9F /* CustomButton.swift */,
+				085DB57B28128BC100345F9F /* CustomSlider.swift */,
+				085DB5752812462300345F9F /* CustomTextField.swift */,
+				087619F92132493E00D47836 /* ViewController.swift */,
+			);
+			path = CustomItems;
+			sourceTree = "<group>";
+		};
 		085DB5692811FFA700345F9F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				085DB56A2811FFC600345F9F /* UIViewController+Extension.swift */,
-				085DB5732812448200345F9F /* UITextFields+Extension.swift */,
-				085DB57D28129F5700345F9F /* UIView+Extension.swift */,
-				08037C2D2814F400008E9C97 /* UIButton+Extension.swift */,
-				08037C2F2814F41A008E9C97 /* UIImage+Extension.swift */,
 				08037C312814F43F008E9C97 /* Double+Extension.swift */,
 				08037C362815010B008E9C97 /* String+Extension.swift */,
+				08037C2D2814F400008E9C97 /* UIButton+Extension.swift */,
+				08037C2F2814F41A008E9C97 /* UIImage+Extension.swift */,
+				085DB5732812448200345F9F /* UITextFields+Extension.swift */,
+				085DB57D28129F5700345F9F /* UIView+Extension.swift */,
+				085DB56A2811FFC600345F9F /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -177,21 +213,15 @@
 		087619F62132493E00D47836 /* TipCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				087619F72132493E00D47836 /* AppDelegate.swift */,
+				089DEE552270B95E00F9160B /* LaunchScreen.storyboard */,
+				087619FB2132493E00D47836 /* Main.storyboard */,
+				08037C3C281614F3008E9C97 /* ViewControllers */,
+				08037C3E28161550008E9C97 /* CustomItems */,
+				085DB5692811FFA700345F9F /* Extensions */,
+				08037C3D28161514008E9C97 /* Resources */,
 				08037C332814F585008E9C97 /* Colors */,
 				085DB56C2812003300345F9F /* Fonts */,
-				087619F72132493E00D47836 /* AppDelegate.swift */,
-				085DB5602810AF7800345F9F /* TipCalculatorViewController.swift */,
-				085DB5612810AF7800345F9F /* TipCalculatorViewController.xib */,
-				085DB5692811FFA700345F9F /* Extensions */,
-				087619F92132493E00D47836 /* ViewController.swift */,
-				087619FB2132493E00D47836 /* Main.storyboard */,
-				089DEE552270B95E00F9160B /* LaunchScreen.storyboard */,
-				087619FE2132494000D47836 /* Assets.xcassets */,
-				085DB5792812558800345F9F /* Colors.xcassets */,
-				08761A032132494000D47836 /* Info.plist */,
-				085DB5752812462300345F9F /* CustomTextField.swift */,
-				085DB5772812519600345F9F /* CustomButton.swift */,
-				085DB57B28128BC100345F9F /* CustomSlider.swift */,
 			);
 			path = TipCalculator;
 			sourceTree = "<group>";
@@ -351,6 +381,7 @@
 				089DEE562270B95E00F9160B /* LaunchScreen.storyboard in Resources */,
 				085DB570281209EE00345F9F /* Playball.ttf in Resources */,
 				087619FF2132494000D47836 /* Assets.xcassets in Resources */,
+				08037C3B281614EA008E9C97 /* CustomTipViewController.xib in Resources */,
 				085DB5632810AF7800345F9F /* TipCalculatorViewController.xib in Resources */,
 				087619FD2132493E00D47836 /* Main.storyboard in Resources */,
 				085DB57228120A1600345F9F /* NunitoSans-SemiBoldItalic.ttf in Resources */,
@@ -472,6 +503,7 @@
 				085DB57E28129F5800345F9F /* UIView+Extension.swift in Sources */,
 				085DB5622810AF7800345F9F /* TipCalculatorViewController.swift in Sources */,
 				085DB57C28128BC100345F9F /* CustomSlider.swift in Sources */,
+				08037C3A281614EA008E9C97 /* CustomTipViewController.swift in Sources */,
 				085DB5782812519600345F9F /* CustomButton.swift in Sources */,
 				08037C372815010B008E9C97 /* String+Extension.swift in Sources */,
 				08037C352814F592008E9C97 /* Colors.swift in Sources */,
@@ -648,7 +680,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5D7WA4DHD4;
-				INFOPLIST_FILE = TipCalculator/Info.plist;
+				INFOPLIST_FILE = TipCalculator/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -667,7 +699,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5D7WA4DHD4;
-				INFOPLIST_FILE = TipCalculator/Info.plist;
+				INFOPLIST_FILE = TipCalculator/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

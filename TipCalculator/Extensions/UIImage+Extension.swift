@@ -8,8 +8,9 @@
 
 import UIKit
 
-
 extension UIImage {
+
+    /// Returns UIImage with rounded corners
     public func rounded(radius: CGFloat) -> UIImage {
         let rect = CGRect(origin: .zero, size: size)
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
