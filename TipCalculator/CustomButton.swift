@@ -87,6 +87,20 @@ public class CustomButton: UIButton {
             }
         }
     }
+
+    public override var isSelected: Bool {
+        didSet {
+            let backgroundColor: UIColor = isSelected ? .G200 : .white
+            self.backgroundColor = backgroundColor
+
+            let title = self.titleLabel?.text ?? ""
+            let selectedAttributedTitle = NSAttributedString(string: "\(title)", attributes: [.foregroundColor : UIColor.white])
+            self.setAttributedTitle(selectedAttributedTitle, for: .selected)
+
+            let normalAttributedTitle = NSAttributedString(string: "\(title)", attributes: [.foregroundColor : UIColor.G300])
+            self.setAttributedTitle(normalAttributedTitle, for: .normal)
+        }
+    }
     
     init(title: String) {
         super.init(frame: CGRect.zero)
@@ -118,14 +132,5 @@ public class CustomButton: UIButton {
     
 
     private func commonInit() {
-//        //layer.cornerRadius = 30
-   //     self.clipsToBounds = true
-//        self.layer.shadowColor = UIColor.red.cgColor
-//        self.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
-//        self.layer.shadowOpacity = 1.0
-//        self.layer.shadowRadius = 30.0
-
-
     }
-
 }
