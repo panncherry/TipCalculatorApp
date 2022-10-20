@@ -61,4 +61,41 @@ extension UIView {
         return borders
     }
 
+    /// Set UIView height
+    func height(constant: CGFloat, greaterThanOrEqual: Bool = false) {
+        if greaterThanOrEqual {
+            setConstraint(greaterThanOrEqual: true, value: constant, attribute: .height)
+        } else {
+            setConstraint(value: constant, attribute: .height)
+        }
+    }
+
+    /// Sets UIView width
+    func width(constant: CGFloat) {
+        setConstraint(value: constant, attribute: .width)
+    }
+
+    /// Remove constraints
+    private func removeConstraint(attribute: NSLayoutConstraint.Attribute) {
+        constraints.forEach {
+            if $0.firstAttribute == attribute {
+                removeConstraint($0)
+            }
+        }
+    }
+
+    /// Sets constraints
+    private func setConstraint(greaterThanOrEqual: Bool = false, value: CGFloat, attribute: NSLayoutConstraint.Attribute) {
+        removeConstraint(attribute: attribute)
+        let constraint =
+            NSLayoutConstraint(item: self,
+                               attribute: attribute,
+                               relatedBy: greaterThanOrEqual ? NSLayoutConstraint.Relation.greaterThanOrEqual : NSLayoutConstraint.Relation.equal,
+                               toItem: nil,
+                               attribute: NSLayoutConstraint.Attribute.notAnAttribute,
+                               multiplier: 1,
+                               constant: value)
+        self.addConstraint(constraint)
+    }
+
 }

@@ -34,4 +34,15 @@ extension Double {
         return numberFormatter.string(from: NSNumber(value:self))!
     }
 
+
+    func commasWithPercentFraction() -> String {
+          let numberFormatter = NumberFormatter()
+          numberFormatter.locale = Locale(identifier: "en_US")
+          numberFormatter.numberStyle = .percent
+          numberFormatter.multiplier = 1
+          numberFormatter.minimumFractionDigits = 2
+          numberFormatter.maximumFractionDigits = 2
+          return numberFormatter.string(from: NSNumber(value:self))!
+      }
+
 }

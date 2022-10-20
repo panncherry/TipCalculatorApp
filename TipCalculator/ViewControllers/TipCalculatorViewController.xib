@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -17,9 +18,11 @@
                 <outlet property="fifteenPercentButton" destination="QVF-cw-tvW" id="mAU-hi-uDO"/>
                 <outlet property="numberOfPersonLabel" destination="mY0-et-146" id="Nn2-uQ-U9b"/>
                 <outlet property="slider" destination="EX8-cs-N8L" id="LDh-Tx-6jW"/>
+                <outlet property="splitView" destination="Hop-zv-HhD" id="NXx-PQ-Ak9"/>
                 <outlet property="tenPercentButton" destination="bmq-ib-gff" id="ahj-Rx-HfT"/>
                 <outlet property="textField" destination="gpF-Rb-hy7" id="R7o-4I-nJ2"/>
                 <outlet property="tipPerPersonLabel" destination="aXD-ym-s7u" id="bwe-YG-NC0"/>
+                <outlet property="topView" destination="n34-8h-bS6" id="vw1-Zv-nrl"/>
                 <outlet property="topViewHeightConstraint" destination="S8l-3t-Bnl" id="ILf-hp-Gzb"/>
                 <outlet property="totalBillLabel" destination="V9g-QQ-efQ" id="0ed-6a-4am"/>
                 <outlet property="totalPerPersonLabel" destination="71R-cT-OxN" id="KWV-mA-M2b"/>
@@ -91,7 +94,7 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bmq-ib-gff" customClass="CustomButton" customModule="TipCalculator" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="67.333333333333329" height="54"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="54" id="PUT-nu-TGB"/>
                                             </constraints>
@@ -110,7 +113,7 @@
                                             </state>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                    <color key="value" name="G100"/>
+                                                    <color key="value" name="G200"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
                                                     <size key="value" width="0.0" height="3"/>
@@ -140,7 +143,7 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QVF-cw-tvW" customClass="CustomButton" customModule="TipCalculator" customModuleProvider="target">
                                             <rect key="frame" x="77.333333333333343" y="0.0" width="67.333333333333343" height="54"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="54" id="A7i-Zx-b57"/>
                                             </constraints>
@@ -171,7 +174,7 @@
                                                     <size key="value" width="0.0" height="3"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                    <color key="value" name="G100"/>
+                                                    <color key="value" name="G200"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="normalBackgroundColor">
                                                     <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -182,6 +185,9 @@
                                                 <userDefinedRuntimeAttribute type="color" keyPath="selectedBackgroundColor">
                                                     <color key="value" name="G100"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="fifteenPercentButtonHit:" destination="-1" eventType="touchUpInside" id="qge-YX-Sif"/>
@@ -189,7 +195,7 @@
                                         </button>
                                         <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D9C-OK-yfN" customClass="CustomButton" customModule="TipCalculator" customModuleProvider="target">
                                             <rect key="frame" x="154.66666666666669" y="0.0" width="75.333333333333314" height="54"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="54" id="NJe-60-DRy"/>
                                             </constraints>
@@ -220,7 +226,7 @@
                                                     <size key="value" width="0.0" height="3"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                    <color key="value" name="G100"/>
+                                                    <color key="value" name="G200"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="normalBackgroundColor">
                                                     <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -246,7 +252,7 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0bA-dA-9pV" customClass="CustomButton" customModule="TipCalculator" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="61.666666666666664" height="54"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="54" id="iKF-r0-POQ"/>
                                             </constraints>
@@ -277,7 +283,7 @@
                                                     <size key="value" width="0.0" height="3"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                    <color key="value" name="G100"/>
+                                                    <color key="value" name="G200"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
@@ -286,7 +292,7 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c7g-g6-vr9" customClass="CustomButton" customModule="TipCalculator" customModuleProvider="target">
                                             <rect key="frame" x="71.666666666666671" y="0.0" width="158.33333333333331" height="54"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="54" id="FeK-9e-EMi"/>
                                             </constraints>
@@ -317,7 +323,7 @@
                                                     <size key="value" width="0.0" height="3"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                    <color key="value" name="G100"/>
+                                                    <color key="value" name="G200"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
@@ -352,7 +358,7 @@
                                     <color key="textColor" name="DY00"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="1" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="EX8-cs-N8L" customClass="CustomSlider" customModule="TipCalculator" customModuleProvider="target">
+                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="1" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="EX8-cs-N8L" customClass="CustomSlider" customModule="TipCalculator" customModuleProvider="target">
                                     <rect key="frame" x="-2" y="30" width="234" height="31"/>
                                     <color key="minimumTrackTintColor" name="G300"/>
                                     <color key="maximumTrackTintColor" name="G100"/>
@@ -404,15 +410,15 @@
                                     <rect key="frame" x="0.0" y="0.0" width="145" height="50"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill per person" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FX4-fO-Szt">
-                                            <rect key="frame" x="15" y="0.0" width="115.33333333333331" height="16"/>
+                                            <rect key="frame" x="14.999999999999993" y="0.0" width="115.33333333333331" height="16"/>
                                             <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
-                                            <color key="textColor" name="DY00"/>
+                                            <color key="textColor" systemColor="systemBrownColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xP1-Xr-10X">
                                             <rect key="frame" x="40" y="24" width="65" height="24"/>
                                             <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="24"/>
-                                            <color key="textColor" name="G300"/>
+                                            <color key="textColor" name="G400"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -430,13 +436,13 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip per person" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ms3-Va-2IR">
                                             <rect key="frame" x="12.666666666666657" y="0.0" width="117" height="16"/>
                                             <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
-                                            <color key="textColor" name="DY00"/>
+                                            <color key="textColor" systemColor="systemBrownColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXD-ym-s7u">
                                             <rect key="frame" x="38.666666666666657" y="24" width="65" height="24"/>
                                             <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="24"/>
-                                            <color key="textColor" name="G300"/>
+                                            <color key="textColor" name="G400"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -456,13 +462,13 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total per person" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4q-PG-VRr">
                             <rect key="frame" x="8" y="37.666666666666686" width="319" height="19"/>
                             <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="19"/>
-                            <color key="textColor" name="DY00"/>
+                            <color key="textColor" systemColor="systemBrownColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71R-cT-OxN">
                             <rect key="frame" x="8" y="64.666666666666686" width="319" height="32"/>
                             <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="32"/>
-                            <color key="textColor" name="G300"/>
+                            <color key="textColor" name="G400"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6iC-NT-RHU">
@@ -472,15 +478,15 @@
                                     <rect key="frame" x="0.0" y="0.0" width="145" height="50"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total bill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Es0-tk-bMp">
-                                            <rect key="frame" x="40" y="0.0" width="65.333333333333314" height="16"/>
+                                            <rect key="frame" x="39.999999999999993" y="0.0" width="65.333333333333314" height="16"/>
                                             <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
-                                            <color key="textColor" name="DY00"/>
+                                            <color key="textColor" systemColor="systemBrownColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9g-QQ-efQ">
                                             <rect key="frame" x="40" y="24" width="65" height="24"/>
                                             <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="24"/>
-                                            <color key="textColor" name="G300"/>
+                                            <color key="textColor" name="G400"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -498,13 +504,13 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXr-nE-HNh">
                                             <rect key="frame" x="39" y="0.0" width="64" height="16"/>
                                             <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
-                                            <color key="textColor" name="DY00"/>
+                                            <color key="textColor" systemColor="systemBrownColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctb-qW-olp">
                                             <rect key="frame" x="38.666666666666657" y="24" width="65" height="24"/>
                                             <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="24"/>
-                                            <color key="textColor" name="G300"/>
+                                            <color key="textColor" name="G400"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -607,16 +613,28 @@
     <resources>
         <image name="TopBackgroundView" width="1290" height="419"/>
         <namedColor name="DY00">
-            <color red="0.6470588235294118" green="0.65098039215686276" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.6470000147819519" green="0.65100002288818359" blue="0.47499999403953552" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="G100">
-            <color red="0.61960784313725492" green="0.9137254901960784" blue="0.77647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.62000000476837158" green="0.91399997472763062" blue="0.77600002288818359" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="G200">
+            <color red="0.3529999852180481" green="0.64300000667572021" blue="0.49799999594688416" alpha="0.85000002384185791" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="G300">
-            <color red="0.3529411764705882" green="0.64313725490196072" blue="0.49803921568627452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.3529999852180481" green="0.64300000667572021" blue="0.49799999594688416" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="G400">
+            <color red="0.30199998617172241" green="0.40799999237060547" blue="0.27500000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

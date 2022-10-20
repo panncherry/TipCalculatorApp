@@ -21,7 +21,7 @@ public class CustomButton: UIButton {
     }
     
     /// Sets the color of the border
-    @IBInspectable public var borderColor: UIColor = .clear {
+    @IBInspectable public var borderColor: UIColor = .lightGray {
         didSet {
             layer.borderColor = borderColor.cgColor
         }
@@ -90,7 +90,7 @@ public class CustomButton: UIButton {
 
     public override var isSelected: Bool {
         didSet {
-            let backgroundColor: UIColor = isSelected ? .G200 : .white
+            let backgroundColor: UIColor = isSelected ? .G200 : .systemGray6
             self.backgroundColor = backgroundColor
 
             let title = self.titleLabel?.text ?? ""

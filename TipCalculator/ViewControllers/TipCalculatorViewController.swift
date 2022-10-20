@@ -13,6 +13,8 @@ import UIKit
 class TipCalculatorViewController: UIViewController {
 
     /// IBOutlets
+    @IBOutlet weak var topView: UIView!
+    @IBOutlet weak var splitView: UIView!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var textField: CustomTextField!
     @IBOutlet weak var tenPercentButton: CustomButton!
@@ -29,10 +31,10 @@ class TipCalculatorViewController: UIViewController {
     @IBOutlet weak var billPerPersonLabel: UILabel!
     @IBOutlet weak var topViewHeightConstraint: NSLayoutConstraint!
 
-
     /// Properties
     var currentSliderValue: Double = 2.0
     var selectedTipPercent: Double = 0.20
+    let hapticManager = HapticManager(feedbackTypes: [.selection, .impactMedium])
 
 
     // MARK: - Life cycles
@@ -49,54 +51,72 @@ class TipCalculatorViewController: UIViewController {
         view.layoutIfNeeded()
     }
 
-    private func updateButtonState(selectedButton: CustomButton) {
-       let buttonArray = [tenPercentButton, fifteenPercentButton, twentyPercentButton, twentyFivePercentButton, customTipButton]
-        for button in buttonArray {
-            button?.isSelected = (button != selectedButton) ? false : true
-        }
-        calculateTip()
-    }
-
     // MARK: - Actions
+    /// Calculates ten percent tip
     @IBAction func tenPercentButtonHit(_ sender: Any) {
         selectedTipPercent = 0.10
+        hapticManager.playMediumImpact()
         updateButtonState(selectedButton: tenPercentButton)
     }
 
+    /// Calculates fifteen percent tip
     @IBAction func fifteenPercentButtonHit(_ sender: Any) {
         selectedTipPercent = 0.15
+        hapticManager.playMediumImpact()
         updateButtonState(selectedButton: fifteenPercentButton)
     }
 
+    /// Calculates twenty percent tip
     @IBAction func twentyPercentButtonHit(_ sender: Any) {
         selectedTipPercent = 0.20
+        hapticManager.playMediumImpact()
         updateButtonState(selectedButton: twentyPercentButton)
     }
 
+    /// Calculates twenty five percent tip
     @IBAction func twentyFivePercentButtonHit(_ sender: Any) {
         selectedTipPercent = 0.25
+        hapticManager.playMediumImpact()
         updateButtonState(selectedButton: twentyFivePercentButton)
     }
 
+    /// Calculates tip with custom tip percent
     @IBAction func customTipButtonHit(_ sender: Any) {
-        selectedTipPercent = 0.18
+        hapticManager.playMediumImpact()
+
+        guard let text = textField.text, !text.isEmpty else {
+            let alert = UIAlertController(title: "", message: "Please enter total bill.", preferredStyle: .alert)
+            let submitAction = UIAlertAction(title: "OK", style: .default)
+            alert.addAction(submitAction)
+            present(alert, animated: true)
+            return
+        }
+
         updateButtonState(selectedButton: customTipButton)
+        promptCustomTipView()
     }
 
+    /// Calculates tip and updates lables as the slider value changes
     @IBAction func sliderValueChanged(_ sender: UISlider) {
+        hapticManager.playSelectionFeedback()
+
         let value = Int(sender.value)
         currentSliderValue = Double(value)
         numberOfPersonLabel.text = "\(Int(currentSliderValue))"
         calculateTip()
     }
 
+    /// Dismisses the keyboard upon tapping outside of textField
     @IBAction func viewDidTapped(_ sender: Any) {
         view.endEditing(true)
     }
 
+    // MARK: - Helper Functions
     /// Calculates tip
     private func calculateTip() {
         guard let text = textField.text, !(text.isEmpty) else { return }
+
+        view.endEditing(true)
 
         let billEntered = self.getInputAmount()
 
@@ -144,7 +164,25 @@ class TipCalculatorViewController: UIViewController {
         return amount
     }
 
+    /// Prompts custom UIAlertViewController with textField to allow user to input custom percentage
+    private func promptCustomTipView() {
+        let alertVC = CustomUIAlertViewController(title: "\nCustom Tip", message: "\nEnter custom tip percentage.\n", preferredStyle: .alert)
+        alertVC.delegate = self
+        present(alertVC, animated: true)
+    }
+
+    /// Updates button states
+    private func updateButtonState(selectedButton: CustomButton) {
+        updateCustomTipButtonTitle(title: "Custom Tip")
+
+        let buttonArray = [tenPercentButton, fifteenPercentButton, twentyPercentButton, twentyFivePercentButton, customTipButton]
+        for button in buttonArray {
+            button?.isSelected = (button != selectedButton) ? false : true
+        }
+        calculateTip()
+    }
 }
+
 
 // MARK: - UITextField Delegate
 extension TipCalculatorViewController: UITextFieldDelegate {
@@ -176,10 +214,26 @@ extension TipCalculatorViewController: UITextFieldDelegate {
     }
 }
 
-extension UITextField {
 
+// MARK: - CustomTip Delegate
+extension TipCalculatorViewController: CustomTipDelegate {
 
-    
+    /// Calculates tips with the percentage user entered
+    func calculateCustomTip(percent: Double) {
+        guard percent > 0 else {
+            selectedTipPercent = 0.20
+            updateButtonState(selectedButton: twentyPercentButton)
+            return
+        }
+        selectedTipPercent = percent/100
+        updateCustomTipButtonTitle(title: percent.commasWithPercentFraction())
+        calculateTip()
+    }
+
+    /// Updates custom tip button title
+    func updateCustomTipButtonTitle(title: String) {
+        let attributedTitle = NSAttributedString(string: title, attributes: [.foregroundColor : UIColor.white])
+        customTipButton.setAttributedTitle(attributedTitle, for: .normal)
+        customTipButton.setAttributedTitle(attributedTitle, for: .selected)
+    }
 }
-
-
